@@ -1,0 +1,29 @@
+#
+#Created by: Wendi Yu
+#Created on: Feb-19-2019
+#
+#This program user need to input the length and width,
+# it will calculates the height of a board foot.
+
+def boardFoot (length, width):
+
+  VOLUME = 144
+  height =  (((VOLUME / length) / width)*1000.0)/1000.0
+
+  return height;  
+
+#user input the length
+length = float(input("Please, enter the length of the board foot in inches: "))
+
+#user input the width
+width = float(input("Please, enter the width of the board foot in inches: "))
+
+height = boardFoot(length,width)
+
+# user can not input a 0 or negative number
+if (length <= 0 or width <= 0) :
+  print("Invalid input! Please, put a positive number that bigger than 0 for width and length.")
+else :
+  print("The height of the board foot is " + str(round(height,3)) + " inches.")
+
+input()
